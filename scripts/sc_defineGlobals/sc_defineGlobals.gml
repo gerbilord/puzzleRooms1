@@ -106,7 +106,7 @@ function defineGlobalStructs(){
 		actionEnd = 0;
 		doesOccupyCell = function(){return isClosed};
 		canBePushed = function(){return false};
-		isClosed = false;
+		isClosed = true;
 		
 	};
 	
