@@ -1,0 +1,15 @@
+﻿wall,wall,wall,wall,wall,wall,wall
+wall,,,goal,,,wall
+wall,,,,,,wall
+wall,boulder,boulder,,boulder,boulder,wall
+wall,,boulder,boulder,boulder,,wall
+wall,boulder,,,,boulder,wall
+wall,,boulder,boulder,boulder,,wall
+wall,,,,,,wall
+wall,,,,,,wall
+wall,,,,,,wall
+wall,,,,,,wall
+wall,,,,,,wall
+wall,,,,,,wall
+wall,,,player1,,,wall
+wall,wall,player3,player2,wall,wall,wall

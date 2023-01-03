@@ -65,6 +65,7 @@
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"thing.csv","CopyToMask":-1,"filePath":"datafiles/levels",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"theOgLevel.csv","CopyToMask":-1,"filePath":"datafiles/levels",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"pokemonLevel.csv","CopyToMask":-1,"filePath":"datafiles/levels",},
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"defaultLevel.csv","CopyToMask":-1,"filePath":"datafiles/levels",},
   ],
   "MetaData": {

@@ -1,15 +1,12 @@
-﻿wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall
-wall,,,,,,,,,,,,,,,,,,,,,,,,,,,,wall
-wall,,,,,,,,,,,,,,,,,,,,,,,,,,,,wall
-wall,,,,,boulder,,,,,boulder,,,boulder,,,,boulder,,boulder,,,,,,,,,wall
-wall,,,boulder,,boulder,,,,,,,,,,,,,,,,,,,,,,,wall
-wall,boulder,player1,,,boulder,,,boulder,,,,,boulder,boulder,,,,,,,,,,,,,,wall
-wall,,,,,,,,,,,,,,,,,,,,,,,,,,,,wall
-wall,,,boulder,,boulder,,,,boulder,,boulder,,,,,,,,,,,,,,goal,,,wall
-wall,,,,,,,,,,,,,,,,,boulder,boulder,,,,boulder,,,,,,wall
-wall,,,,,,,,,,,,player1,,boulder,,,,,,,,,,,,,,wall
-wall,,,,,,,boulder,,,,,,,,,,,,,,,,,,,,,wall
-wall,,,,,,,,,,,,,,,,,,,,,,,,,,boulder,,wall
-wall,,,,,,,,,,,,,,,,,,,,,,,,,,,,wall
-wall,,,,,,,,,,,,,,,,,,,,,,,,,,,,wall
-wall,wall,player3,player2,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall
+﻿wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall
+wall,,,,,,,,,,,,,,wall
+wall,,,,,,,goal,,,,player1,,,wall
+wall,,"boulder,  goal",,,boulder,,,,,,,,,wall
+wall,,,player1,,,,,,,,,boulder,,wall
+wall,,,,,,,,,goal,boulder,,,,wall
+wall,,,,,,,,,boulder,,,,,wall
+wall,,boulder,,,boulder,goal,,,,,,,,wall
+wall,,,,boulder,,,,,,,player1,,,wall
+wall,,,,,,,,,,,,,,wall
+wall,,,,,,,,,,,,,,wall
+wall,wall,player3,player2,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall,wall
