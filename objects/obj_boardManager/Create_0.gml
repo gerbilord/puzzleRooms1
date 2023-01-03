@@ -14,6 +14,13 @@ level_grid[level_width-1][level_height-1] = []
 clone_actions = [] // array of actions
 current_player_action_history = [] // list of actions
 current_objects_controlled_by_player = [] // list of objects that will act on player input
+event_groups = create_array_with_initializer(100, function(iValue){
+	var newEventGroup = new global.eventStructs.eventGroup(iValue);
+	array_push(newEventGroup.functions, triggerBasicButtonGate);
+	return newEventGroup;
+	});
+current_event_triggers = [];
+
 
 current_tick = 0; // tick and turn are the same thing.
 

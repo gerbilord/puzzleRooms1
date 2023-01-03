@@ -34,3 +34,11 @@ function canObjectsAct(currentTick, arrayOfObjects){
 	}
 	return true;
 }
+
+function getEventGroupId(object){
+	return variable_instance_exists(object, "eventGroupId") ? object.eventGroupId : -1;
+}
+
+function hasEventGroupId(object){
+	return getEventGroupId(object) != -1;
+}

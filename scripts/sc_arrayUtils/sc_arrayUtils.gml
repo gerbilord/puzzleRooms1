@@ -26,6 +26,21 @@ function array_inbounds_2D(array2D, xx, yy){
 	return false;
 }
 
+// Creates an array and sets the value to what initializer returns.
+function create_array_with_initializer(size, initializer){
+	var i = size;
+	var newArray = [];
+
+	repeat(size)
+	{
+    	newArray[i-1] = initializer(i-1);
+    	i -= 1;
+	}
+	
+	return newArray;
+}
+
+
 /*function array_filter(array1, filterFunction){
 	var filterArray = [];
 	for(var i = 0; i < array_length(array1); i++;){

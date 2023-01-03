@@ -1,5 +1,6 @@
 function handleTick(boardManager){
 	with(boardManager){
+	current_event_triggers = [];
 	playerInputMovement = getPlayerMovement();
 	array_push(current_player_action_history, playerInputMovement);
 	
@@ -12,10 +13,23 @@ function handleTick(boardManager){
 		var requestedActions = getRequestedActions(boardManager, currentActionInput);
 		resolveRequestedActions(boardManager, requestedActions);
 	}
+	
+	resolveEventTriggers(boardManager);
 
 	current_tick++;
 	}
 }
+
+function resolveEventTriggers(boardManager){
+	
+	for(var i = 0; i < array_length( boardManager.current_event_triggers); i++){
+		var eventGroupId = boardManager.current_event_triggers[i].eventGroupId;
+		var trigger =  boardManager.current_event_triggers[i].trigger;
+		var objectsThatTriggeredEvents = boardManager.current_event_triggers[i].objects;
+		
+		boardManager.event_groups[eventGroupId].triggerEventGroup(boardManager, trigger, objectsThatTriggeredEvents);
+	}
+};
 
 function getRequestedActions(boardManager, requestedAction){
 	with(boardManager){
@@ -203,5 +217,43 @@ function moveObject(boardManager, objectToMove, newX, newY){
 		
 		objectToMove.boardX = newX;
 		objectToMove.boardY = newY;
+		
+		addEventTriggersForCell(boardManager, oldX, oldY, EventGroupTriggers.onMove);
+		addEventTriggersForCell(boardManager, newX, newY, EventGroupTriggers.onMove);
 	}
+}
+
+function addEventTriggersForCell(boardManager, cellX, cellY, trigger){
+	var objectsToTrigger = boardManager.level_grid[cellX][cellY];
+	
+	for(var i = 0; i < array_length(objectsToTrigger); i++){
+		addEventTriggerQueueItem(boardManager, objectsToTrigger[i], trigger);
+	}
+};
+
+function addEventTriggerQueueItem(boardManager, object, trigger){
+	
+	if(!hasEventGroupId(object)){return;}
+	
+	var eventGroupId = getEventGroupId(object);
+	
+	var arrayIndex = -1;
+	for(var i = 0; i < array_length(boardManager.current_event_triggers); i++){
+		var queueItem = current_event_triggers[i];
+		if(queueItem.eventGroupId == eventGroupId){
+			arrayIndex = i;
+			break;
+		}
+	}
+	
+	var queueItem = undefined;
+	if(arrayIndex >= 0){
+		queueItem = boardManager.current_event_triggers[arrayIndex]
+		
+	} else{
+		queueItem = new global.eventStructs.eventTriggerQueueItem(eventGroupId, trigger);
+	}
+	
+	array_push(queueItem.objects, object);
+	array_push(boardManager.current_event_triggers, queueItem);
 }
